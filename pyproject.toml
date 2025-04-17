@@ -1,0 +1,34 @@
+[build-system]
+# Defines the build system used to package the project
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# Project metadata
+name = "lobquant"
+version = "0.1.0"
+description = "Compute market microstructure measures based on high-frequency limit order book and trade data."
+authors = [
+  { name = "Florian Ewald", email = "" }
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+dependencies = [
+    # "numpy",
+    # "pandas",
+]
+
+[project.urls]
+Homepage = "https://github.com/ewald-florian/lobquant"
+
+# Optional development dependencies
+[tool.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8"
+]
+
+# Optional: define your testing tool
+[tool.pytest.ini_options]
+testpaths = ["tests"]
